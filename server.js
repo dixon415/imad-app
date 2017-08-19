@@ -26,7 +26,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 function hash (input, salt){
-    var hashed = crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
+    var hashed = cryptoalgo.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
     return (hashed.toString('hex'));
 }
 app.get('/password/tester', function(req, res){
