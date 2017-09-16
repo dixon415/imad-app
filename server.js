@@ -2,7 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var cryptoalgo = require('crypto');
+
 var app = express();
+
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
